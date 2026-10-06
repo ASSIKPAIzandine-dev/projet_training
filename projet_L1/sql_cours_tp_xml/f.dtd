@@ -1,0 +1,32 @@
+<!ELEMENT inscriptions (inscrit +)>
+<!ELEMENT inscrit (etudiant,adresse)>
+<!ATTLIST  inscrit id ID #REQUIRED semestre CDATA #REQUIRED >
+<!ELEMENT etudiant(nom,titre,resumer)>
+<!ATTLIST etudiant num ID #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT resumer (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+
+
+
+<xml version="1.0" encoding=utf-8">
+<!DOCTYPE inscription SYSTEM "inscription.dtd">
+<inscription>
+     <inscrit="1" semestre ="2021-2022">
+        <etudiant num="A001">
+            <nom> didier</nom>
+            <titre> Mr</titre>
+            <resumer> etudiant en droit</resumer>
+        </etudiant>
+        <adresse> 234 rue du marché,sokodé</adresse>
+     </inscrit>
+     </inscrit="2"semestre ="2021-2022">
+         <etudiant num="A002">
+            <nom> kodjo</nom>
+            <titre> Mr</titre>
+            <resumer> etudiant en math</resumer>
+         </etudiant>
+         <adresse> 232 rue du marché,dapaong</adresse>
+         </inscrit>
+         </inscriptions>

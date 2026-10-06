@@ -1,0 +1,1 @@
+create table Tache(id integer primary key AUTOINCREMENT,nom varchar,description text,dateEcheance date,heure time);

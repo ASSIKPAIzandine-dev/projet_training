@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <title>Le Petit Prince</title>
+        <author>Antoine de Saint-Exupéry</author>
+        <year>1943</year>
+    </book>
+    <book>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <year>1949</year>
+    </book>
+    <book>
+        <title>À la recherche du temps perdu</title>
+        <author>Marcel Proust</author>
+        <year>1913</year>
+    </book>
+</library>

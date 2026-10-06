@@ -1,0 +1,77 @@
+DROP DATABASE
+CREATE DATABASE
+CREATE SEQUENCE
+ nextval 
+---------
+       1
+(1 row)
+
+ nextval 
+---------
+       2
+(1 row)
+
+ nextval 
+---------
+       3
+(1 row)
+
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ currval 
+---------
+       3
+(1 row)
+
+ALTER SEQUENCE
+INSERT 0 1
+ id  |    nom    |  prenom   | sexe | age 
+-----+-----------+-----------+------+-----
+   1 | sossoukpe | doudou    | M    |  15
+   2 | lamboni   | afi       | F    |  20
+   3 | Jean      | merveille | M    |  30
+ 100 | Mohamed   | Ali       | M    |  35
+(4 rows)
+
+CREATE SEQUENCE
+ nextval 
+---------
+    5000
+(1 row)
+
+ nextval 
+---------
+    5010
+(1 row)
+
+ nextval 
+---------
+    5020
+(1 row)
+
+ nextval 
+---------
+    5030
+(1 row)
+
+ nextval 
+---------
+    5040
+(1 row)
+
+ nextval 
+---------
+    5050
+(1 row)
+
+ setval 
+--------
+      1
+(1 row)
+
+DELETE 4
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1

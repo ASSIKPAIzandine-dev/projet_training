@@ -1,0 +1,122 @@
+= TP1 =
+
+J'aime ifnti
+j'ai faim
+
+== pratique ==
+
+=== longueur ===
+---- 
+c'est mon code
+lolo
+  lali
+----
+
+
+....
+tonto
+   lota
+....
+
+****
+principe
+ muni
+****
+
+
+* python
+* java
+* perl
+* c+ +
+
+les éléments ordonnés:
+
+. élément
+.. toto
+   ... ball
+. élément2
+
+. élément3
+  .. lone
+
+
+
+
+
+
+|===
+|nom|prenom|sexe
+|MOUSSA|richard|M
+|ALI|rene|F
+|===
+
+
+
+
+
+
+
+
+
+
+
+[cols=3]
+|===
+|nom et prenom
+|Binome
+|projet de jeux
+|===
+
+
+
+
+
+image::ifnti.png[width=150,alt="mon logo",align="center"]
+
+
+
+link:ASCIIDOC.html[cour-FD]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

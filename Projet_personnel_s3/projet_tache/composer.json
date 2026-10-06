@@ -1,0 +1,22 @@
+{
+    "name": "izandine/projet_tache",
+    "description": "gestion de tache",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "ASSIKPA Izandine"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "config/"
+            
+        }
+    },
+
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
+}

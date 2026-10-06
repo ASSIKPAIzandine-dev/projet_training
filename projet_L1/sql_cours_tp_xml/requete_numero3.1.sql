@@ -1,0 +1,3 @@
+select NUMAV,NOMAV
+from AVION
+where LOCALISATION='kara'OR CAPACITE<350;

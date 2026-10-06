@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE boutique SYSTEM "exercice.dtd">
+<boutique>
+  <produit numpr="P001">
+    <libelle> tomate</libelle>
+    <qtstock> 300</qtstock>
+    <pu> 500</pu>
+  </produit>
+  <produit numpr="P002">
+    <libelle> cahier</libelle>
+    <qtstock> 443</qtstock>
+    <pu> 200</pu>
+  </produit>
+  <produit numpr="P003">
+    <libelle> bombom</libelle>
+    <qtstock> 324</qtstock>
+    <pu> 100</pu>
+  </produit>
+  <produit numpr="P004">
+    <libelle> huil</libelle>
+    <qtstock> 244</qtstock>
+    <pu> 540</pu>
+  </produit>
+  <produit numpr="P005">
+    <libelle> poisson</libelle>
+    <qtstock> 1214</qtstock>
+    <pu> 600</pu>
+  </produit>
+  <client numcl="C004">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client>
+  <client numcl="C005">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C006">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C007">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C008">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C009">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C0010">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C0011">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C0012">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client><client numcl="C0013">
+    <nom> sossoukpe</nom>
+    <prenom> christophe</prenom>
+    <sexe>masculin</sexe>
+  </client>
+  <commande numco="C001" numcl="C004">
+    <datecommande> 24-01-2025 </datecommande>
+    <mtntotal> 200000000000000</mtntotal>
+  </commande>
+  <lignecommande numco="C001" numpr="P001">
+    <qtecommande> 120000</qtecommande>
+    <mtncommande> 3124526573135</mtncommande>
+    </lignecommande>
+</boutique>
+    
+  
+  

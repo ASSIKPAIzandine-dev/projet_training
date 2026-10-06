@@ -1,0 +1,53 @@
+.body2{
+      background-color: aqua;
+}
+
+.monBody{
+
+      background-color: aquamarine;
+}
+
+
+.matable{
+      margin: 0 auto;
+      border-radius: 15%;
+      border: 1;
+      color: violet;
+}
+
+.forme{
+       text-align: center;
+       border-radius: 0%;
+      
+
+}
+.mon-fieldset{
+       margin: 0 auto;
+        border: 1;
+             
+}
+.titre{
+      text-align: center;
+
+       
+}
+.monLien{
+          display: block;
+    text-align: center;
+}
+
+.monAjout{
+            display: block;
+            text-align: center;
+            
+            
+          
+}
+
+#contenu{
+
+         background-color: cornflowerblue;
+}
+.saisie{
+        border-radius: 15px;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT boutique (produit+,client+,commande+,lignecommande+)>
+<!ELEMENT produit (libelle,qtstock,pu)>
+<!ATTLIST produit numpr  ID #REQUIRED>
+<!ELEMENT libelle (#PCDATA)>
+<!ELEMENT qtstock (#PCDATA)>
+<!ELEMENT pu (#PCDATA)>
+<!ELEMENT client (nom,prenom,sexe)>
+<!ATTLIST client numcl ID #REQUIRED >
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT sexe (#PCDATA)>
+<!ELEMENT commande (datecommande,mtntotal)>
+<!ELEMENT datecommande (#PCDATA)>
+<!ELEMENT mtntotal (#PCDATA)>
+<!ATTLIST commande numco ID #REQUIRED>
+<!ATTLIST commande numcl IDREF #REQUIRED>
+<!ELEMENT lignecommande (qtecommande,mtncommande)>
+<!ELEMENT qtecommande (#PCDATA)>
+<!ELEMENT mtncommande (#PCDATA)>
+<!ATTLIST lignecommande numco IDREF #REQUIRED>
+<!ATTLIST lignecommande numpr IDREF #REQUIRED>

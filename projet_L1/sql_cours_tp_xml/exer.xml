@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE boutique SYSTEM "exercice.dtd">
+<boutique>
+   <produit numproduit="P001">
+      <libelle>sardine</libelle>
+      <Qtestock>12233</Qtestock>
+      <pu>500f</pu>
+   </produit>
+   <client numclient="C001">
+      <nom>sossoukpe</nom>
+      <prenom>komi</prenom>
+      <sexe>Masculi</sexe>
+   </client>
+   <commande numcommande="A12" numclient="ES1">
+      <datecommande>21-08-2025</datecommande>
+      <monttotal>34322f</monttotal>
+   </commande>
+   <lignecommande numcommande="A12" numproduit="p001">
+      <Qtecommande>047</Qtecommande>
+      <mtncommande>5050f</mtncommande>
+   </lignecommande>
+</boutique>

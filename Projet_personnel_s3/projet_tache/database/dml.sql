@@ -1,0 +1,1 @@
+insert into Tache(nom ,description ,dateEcheance ,heure ) values('bosser php','revision sur pdo','12-02-2026','12:20:02'),('tp de js','sur les events','10-03-2026','20:20:02');

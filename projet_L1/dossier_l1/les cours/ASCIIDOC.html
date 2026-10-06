@@ -1,0 +1,1224 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 9.0.0rc1">
+<title>ASCIIDOC</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overridden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>ASCIIDOC</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_qu_8217_est_ce_que_asciidoc">Qu’est-ce que AsciiDoc?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>Asciidoc</strong> est un format de fichier texte qui permet d’écrire des documents (livres, articles, pages web, blogs, …​).</p></div>
+<div class="paragraph"><p>Il définit des constructions syntaxiques qui 
+aideront à comprendre la sémentique des différentes parties de votre 
+texte afin de produire une sortie bien formatée. Cette sortie formatée 
+est un document de format publiable (HTML, DocBook, PDF, ePub, …​).</p></div>
+<div class="paragraph"><p>Certains caractères dans votre document 
+textuel ont une signification spéciale qui va changer le rendu du 
+document. C’est exactement le même concept que les balises en HTML. Mais
+ une différence clé avec AsciiDoc est la propriété du document source à 
+rester même lisible par l’homme.</p></div>
+<div class="paragraph"><p>L’utilisation d’un format textuel a plusieurs avantages :<br></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Le document est facilement lisible et modifiable,
+</p>
+</li>
+<li>
+<p>
+la taille des documents est très légère.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comment_écrire_dans_asciidoc">Comment écrire dans AsciiDoc?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Comme je l’ai dit plus haut, AsciiDoc est un humain lisible <em>format de fichier texte</em>. Ainsi, vous pouvez écrire vos documents en utilisant l’éditeur de texte de votre choix.</p></div>
+<div class="paragraph"><p>L’extension des fichiers AsciiDoc est <strong>.adoc</strong>.</p></div>
+<div class="paragraph"><p><strong><span class="blue">Le formatage du texte</span></strong></p></div>
+<div class="paragraph"><p>Pour un texte organisé en paragraphes, il n’y a
+ pas de syntaxe particulière pour les délimiter. Les lignes de texte 
+adjacentes ou consécutives forment un paragraphe. Pour commencer un 
+nouveau paragraphe après un autre, il suffit d’utiliser une ligne vide.</p></div>
+<div class="paragraph"><p>Il est aussi possible de forcer un retour chariot à la fin d’une phrase en utilisant un espace suivi du caractère plus (+).</p></div>
+<div class="paragraph"><p><strong>Exemple :</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Première ligne du paragraphe.
+Elle se poursuit avec une seconde
+ligne qui fait elle même partie du
+paragraphe
+
+
+Texte avec saut de ligne forcé +
+Ligne suivante</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Rendu</strong></p></div>
+<div class="paragraph"><p>Première ligne du paragraphe.
+Elle se poursuit avec une seconde
+ligne qui fait elle même partie du
+paragraphe</p></div>
+<div class="paragraph"><p>Texte avec saut de ligne forcé<br>
+Ligne suivante</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+les <strong>titres</strong> dans Asciidoc sont identifiés en les sous-jacents avec === ou --- en fonction du niveau du titre,
+</p>
+</li>
+<li>
+<p>
+les caractères <strong>italiques</strong> entre les underscores,
+</p>
+</li>
+<li>
+<p>
+et <strong>gras</strong> entre les étoiles.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>Exemple :</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>normal
+_italique_
+*gras*
++mono+</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Rendu :</strong></p></div>
+<div class="paragraph"><p>normal<br>
+<em>italique</em><br>
+<strong>gras</strong><br>
+<code>mono</code><br></p></div>
+<div class="paragraph"><p>On utilise les caractères slash (//) pour les commentaires niveau ligne.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>// un commentaire</code></pre>
+</div></div>
+<div class="paragraph"><div class="title"><em>Les titres des sections</em></div><p>Un
+ document comporte normalement un seul grand titre et un ou plusieurs 
+niveaux de sous-titres. AsciiDoc ne gère que trois niveaux de 
+sous-titres (sections).</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>= Titre du document AsciiDoc =
+== sous-titre niveau 1 ==
+=== sous-titre niveau 2 ===
+==== sous-titre niveau 3 ====</code></pre>
+</div></div>
+<div class="paragraph"><div class="title"><em>Les blocs</em></div><p>Les
+ blocs permettent de structurer du texte. Différents types de blocs sont
+ utilisables. Ils se définissent avec une suite d’au moins quatre 
+caractères selon leur type et se terminent avec la même suite de 
+caractères. Il est recommandé de n’utiliser que quatre caractères.</p></div>
+<div class="tableblock">
+<table rules="all" frame="border" width="100%" cellspacing="0" cellpadding="4">
+<colgroup><col width="50%">
+<col width="50%">
+</colgroup><tbody>
+<tr>
+<td valign="top" align="left"><p class="table"><strong>Séquences de caractères</strong></p></td>
+<td valign="top" align="left"><p class="table"><strong>Rôles</strong></p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">----</p></td>
+<td valign="top" align="left"><p class="table">Bloc permettant de délimiter un contenu généralement pour les codes sources</p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">////</p></td>
+<td valign="top" align="left"><p class="table">Bloc de commentaires</p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">….</p></td>
+<td valign="top" align="left"><p class="table">Bloc littéral ; restitue le texte tel qu’il est fourni</p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">* * * *</p></td>
+<td valign="top" align="left"><p class="table">Bloc de type sidebar ; le contenu est restitué en dehors du flux</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><div class="title"><em>Les listes</em></div><p>AsciiDoc supporte plusieurs types de listes.</p></div>
+<div class="paragraph"><p><strong><span class="blue">Les listes ordonnées</span></strong></p></div>
+<div class="paragraph"><p>Elles sont définies avec le caractère point (.) suivi d’un espace et supportent aussi le multi-niveau.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>.Les éléments ordonnés sont :
+. élément 1
+. élément 2
+.. élément 2.1
+... élément 2.1.1
+.. élément 2.2
+. élément 3</code></pre>
+</div></div>
+<div class="olist arabic"><div class="title">Les éléments ordonnés sont :</div><ol class="arabic">
+<li>
+<p>
+élément 1
+</p>
+</li>
+<li>
+<p>
+élément 2
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+élément 2.1
+</p>
+<div class="olist lowerroman"><ol class="lowerroman">
+<li>
+<p>
+élément 2.1.1
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+élément 2.2
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+élément 3
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong><span class="blue">Les listes non-ordonnées</span></strong></p></div>
+<div class="paragraph"><p>Elles sont définies avec le caractère de multiplication (*).</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>.Langage de programmation
+* Python
+* Java
+* Perl
+* C++</code></pre>
+</div></div>
+<div class="ulist"><div class="title">Langage de programmation</div><ul>
+<li>
+<p>
+Python
+</p>
+</li>
+<li>
+<p>
+Java
+</p>
+</li>
+<li>
+<p>
+Perl
+</p>
+</li>
+<li>
+<p>
+C++
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Les listes peuvent imbriquer différents niveaux simplement en utilisant autant de caractère (*) que le niveau souhaité.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>.Technologies
+* Technologies front
+** JavaScript
+** CSS
+** XML
+*** HTML</code></pre>
+</div></div>
+<div class="ulist"><div class="title">Technologies</div><ul>
+<li>
+<p>
+Technologies front
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+JavaScript
+</p>
+</li>
+<li>
+<p>
+CSS
+</p>
+</li>
+<li>
+<p>
+XML
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+HTML
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong><span class="blue">Les liste avec étiquettes</span></strong></p></div>
+<div class="paragraph"><p>Elles sont définies en séparant les étiquettes
+ et les définitions par (:). Par défaut, le rendu se fait sur deux 
+lignes. Mais il est possible de faire le formatage sur une seule ligne 
+en ajoutant <strong>[horizontal]</strong> en début de la liste.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>.Type de mémoire
+RAM:: Random Access Memory
+ROM:: Read Only Memory
+NVRAM:: Non volatile random access memory</code></pre>
+</div></div>
+<div class="dlist"><div class="title">Type de mémoire</div><dl>
+<dt class="hdlist1">
+RAM
+</dt>
+<dd>
+<p>
+Random Access Memory
+</p>
+</dd>
+<dt class="hdlist1">
+ROM
+</dt>
+<dd>
+<p>
+Read Only Memory
+</p>
+</dd>
+<dt class="hdlist1">
+NVRAM
+</dt>
+<dd>
+<p>
+Non volatile random access memory
+</p>
+</dd>
+</dl></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>[horizontal]
+.Type de mémoire
+RAM:: Random Access Memory</code></pre>
+</div></div>
+<div class="hdlist"><div class="title">Type de mémoire</div><table>
+<tbody><tr>
+<td class="hdlist1">
+RAM
+<br>
+</td>
+<td class="hdlist2">
+<p style="margin-top: 0;">
+Random Access Memory
+</p>
+</td>
+</tr>
+</tbody></table></div>
+<div class="paragraph"><div class="title"><em>Les tableaux</em></div><p>Un tableau est défini comme un bloc particulier avec la séquence |===. Chaque cellule du tableau est définie avec un caractère |<br>
+Par défaut le nombre de colonnes est déterminé par la première ligne qui vient juste après le délimiteur de tableau.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>|===
+|Nom |Prénom
+|IDRISSOU
+|Djabir
+|AYEVA
+|Yaasiin
+|TEBONOU
+|===</code></pre>
+</div></div>
+<div class="tableblock">
+<table rules="all" frame="border" width="100%" cellspacing="0" cellpadding="4">
+<colgroup><col width="50%">
+<col width="50%">
+</colgroup><tbody>
+<tr>
+<td valign="top" align="left"><p class="table"><strong>Nom</strong></p></td>
+<td valign="top" align="left"><p class="table"><strong>Prénom</strong></p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">IDRISSOU</p></td>
+<td valign="top" align="left"><p class="table">Djabir</p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">AYEVA</p></td>
+<td valign="top" align="left"><p class="table">Yaasiin</p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">TEBONOU</p></td>
+<td valign="top" align="left"><p class="table">Fatihi</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>Il est possible de préciser explicitement le nombre de colonnes.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>[cols=3]
+|===
+|Nom et Prénom
+|Binôme
+|Projet de jeux
+
+|TEBONOU Fatihi
+|IDRISSOU Djabir
+|Bataille navale
+
+|SOWOU Mohammed
+|TCHASSONA TRAORE Walid
+|Awalé
+|===</code></pre>
+</div></div>
+<div class="tableblock">
+<table rules="all" frame="border" width="100%" cellspacing="0" cellpadding="4">
+<colgroup><col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup><tbody>
+<tr>
+<td valign="top" align="left"><p class="table"><strong>Nom et Prénom</strong></p></td>
+<td valign="top" align="left"><p class="table"><strong>Binôme</strong></p></td>
+<td valign="top" align="left"><p class="table"><strong>Projet de jeux</strong></p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">TEBONOU Fatihi</p></td>
+<td valign="top" align="left"><p class="table">IDRISSOU Djabir</p></td>
+<td valign="top" align="left"><p class="table">Bataille navale</p></td>
+</tr>
+<tr>
+<td valign="top" align="left"><p class="table">SOWOU Mohammed</p></td>
+<td valign="top" align="left"><p class="table">TCHASSONA TRAORE Walid</p></td>
+<td valign="top" align="left"><p class="table">Awalé</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><div class="title"><em>Les codes sources</em></div><p>AsciiDoc
+ permet d’intégrer du code source dans le document. AsciiDoctor supporte
+ plusieurs outils de coloration syntaxique qui pourront améliorer la 
+lisibilité du code dans les documents générés.</p></div>
+<div class="listingblock">
+<div class="title">Exemples :</div>
+<div class="content">
+<pre><code>Select * From commande;</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>package Documents.s4.prog_objet;
+
+public class HelloPrenom {
+
+        public static void main(String[] args) {
+                System.out.println("Bonjour "+ args[0]+args[1]+" "+args[2] +" !");
+                System.out.println(args.length);
+        }
+}</code></pre>
+</div></div>
+<div class="paragraph"><div class="title"><em>Les images</em></div><p>Il est possible d’ajouter des images en utilisant la syntaxe <strong>image::</strong> suivi du chemin de l’image puis d’une paire de crochets qui peut contenir un texte alternatif.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>image::logoIfnti.png[Logo IFNTI]</code></pre>
+</div></div>
+<div class="imageblock">
+<div class="content">
+<img src="ASCIIDOC_fichiers/logoIfnti.png" alt="Logo IFNTI">
+</div>
+</div>
+<div class="paragraph"><div class="title"><em>Les liens</em></div><p>AsciiDoc reconnaît de façon automatique les liens vers <strong>http, https, mailto, ftp</strong> et <strong>callto</strong>.</p></div>
+<div class="listingblock">
+<div class="title">Exemple de lien vers le site IFNTI</div>
+<div class="content">
+<pre><code>http://www.ifnti.org[Site IFNTI]
+http://www.ifnti.org
+mailto:joe.bloggs@foobar.com[email Joe Bloggs]
+joe.bloggs@foobar.com</code></pre>
+</div></div>
+<div class="paragraph"><p><a href="http://www.ifnti.org/">Site IFNTI</a><br>
+<a href="http://www.ifnti.org/">http://www.ifnti.org</a><br>
+<a href="mailto:joe.bloggs@foobar.com">email Joe Bloggs</a><br>
+<a href="mailto:joe.bloggs@foobar.com">joe.bloggs@foobar.com</a><br></p></div>
+<div class="paragraph"><p>Il est aussi possible de définir des liens 
+locaux qui pointent sur un autre document html de votre machine. Pour ce
+ faire, on utilise le mot clé <strong>link:</strong> suivi du chemin du fichier puis d’une paire de crochets qui peut contenir un texte alternatif.</p></div>
+<div class="listingblock">
+<div class="title">Syntaxe :</div>
+<div class="content">
+<pre><code>link:chemin_fichier[nomLien]</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Exemple :</div>
+<div class="content">
+<pre><code>link:premierEssai.html[Identité]</code></pre>
+</div></div>
+<div class="paragraph"><p><a href="http://192.168.60.128/premierEssai.html">Identité</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comment_rendre_la_sortie_finale">Comment rendre la sortie finale?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Pour convertir un document d’extension <strong>.adoc</strong> en <strong>HTML</strong> à partir d’une ligne de commande, vous ouvrez une console ensuite lancez la commande <strong>asciidoc</strong>, suivi du nom du document que vous voulez convetir.<br>
+La sortie formatée par défaut d’AsciiDoc est html5, donc ce n’est plus nécessaire de la spécifier avec la commande <strong>-b</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ asciidoc premierEssai.adoc</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Cet article n’est qu’une introduction aux 
+fonctionnalités de base d’AsciiDoc (Asciidoctor) qui propose par 
+ailleurs de nombreuses fonctionnalités avancées. Pour ceux qui ont la 
+curiosité de decouvrir davantage, vous êtes invités à télécharger les 
+documents d’Asciidoc en ligne. Merci!</p></div>
+</div>
+</div>
+</div>
+
+<div id="footer">
+<div id="footer-text">
+Last updated
+ 2020-07-12 19:29:20 GMT
+</div>
+</div>
+
+
+</body></html>

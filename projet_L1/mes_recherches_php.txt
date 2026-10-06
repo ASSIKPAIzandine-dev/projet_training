@@ -1,0 +1,44 @@
+Aperçu IA
+Pour écrire et lire dans un fichier en PHP, utilisez
+file_put_contents() et file_get_contents() pour une gestion simple, ou les fonctions fopen(), fwrite()/fread(), et fclose() pour un contrôle plus fin. Pour l'écriture, file_put_contents() écrase le fichier par défaut ; pour ajouter du contenu à la fin, utilisez l'option FILE_APPEND. Pour la lecture, file_get_contents() renvoie tout le contenu sous forme de chaîne, tandis que fread() lit une partie spécifique du fichier. 
+Méthode simple : file_put_contents() et file_get_contents() 
+php
+
+<?php
+// Chemin vers le fichier
+$chemin_fichier = 'mon_fichier.txt';
+
+// Écrire dans le fichier
+$donnees_a_ecrire = "Bonjour le monde !\n";
+// Le premier paramètre est le chemin, le second sont les données
+// FILE_APPEND permet d'ajouter à la fin du fichier sans écraser
+file_put_contents($chemin_fichier, $donnees_a_ecrire, FILE_APPEND);
+
+// Lire le contenu du fichier
+$contenu = file_get_contents($chemin_fichier);
+
+// Afficher le contenu
+echo nl2br($contenu); // nl2br pour afficher les sauts de ligne en HTML
+
+?>
+fopen() : Ouvre un fichier. Il faut spécifier le chemin et le mode (par exemple, 'r' pour lecture, 'w' pour écriture, 'a' pour ajout).
+fwrite() : Écrit des données dans le fichier ouvert avec fopen().
+fread() : Lit depuis un pointeur de fichier ouvert. Il faut spécifier le nombre d'octets à lire.
+fseek() : Déplace le curseur du fichier. Utile avant de lire pour se placer au début (0) ou à un autre endroit.
+filesize() : Renvoie la taille du fichier en octets, utile avec fread() pour lire le contenu complet.
+fclose() : Ferme le fichier et libère les ressources associées. 
+
+Cette vidéo explique comment créer et éc
+
+$taille = filesize($chemin_fichier);
+    echo "La taille du fichier est de " . $t
+    
+    
+    // Ouvrir le fichier en mode lecture ('r')
+//$fp_lecture = fopen('file.php', 'r');
+
+ //$ligne = fgets($fp_lecture); // Lit une ligne du fichier
+       // echo $ligne 
+
+
+/*

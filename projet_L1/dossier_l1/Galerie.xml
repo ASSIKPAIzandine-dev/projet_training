@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE galeries SYSTEM  "galerie.dtd">
+ <galeries>
+ 
+    <galerie adresse="kpangalame">
+            
+       <gerant>il geree une fois par jours </gerant>
+       <contenu>
+          <type> les elements sont de types verbales</type>
+          <auteur> les auteurs de jean de la fontaine</auteur>
+          <titre> un titre convenables</titre>
+          <prix> le prix sera fixe des lors</prix>
+        </contenu>
+            
+     </galerie>      
+      
+      
+      
+      
+   
+  </galeries>

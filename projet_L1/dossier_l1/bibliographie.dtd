@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bibliographie (livres,articles)>
+<!ELEMENT livres (livre+)>
+<!ELEMENT livre (titre,auteur,tomes,infosedition,avis?)>
+<!ELEMENT titre (#PCDATA)>
+<!ATTLIST titre soustitre CDATA #REQUIRED>
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT tomes (tome+)>
+<!ELEMENT tome EMPTY>
+<!ATTLIST tome nbpage CDATA #REQUIRED soustitre CDATA #IMPLIED>
+<!ELEMENT infosedition (editeur,lieuedition,lieuimpression,ISBN)>
+<!ELEMENT editeur (#PCDATA)> <!ELEMENT lieuedition (#PCDATA)>
+<!ELEMENT lieuimpression (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)> 
+<!ELEMENT avis (#PCDATA)>
+<!ELEMENT articles (article+)>
+<!ELEMENT article (titre,auteur,infospublication,avis)>
+<!ELEMENT infospublication (pages,anneepublication,numerojournal)>
+<!ATTLIST infospublication nomjournal CDATA "sokode infos">
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT anneepublication (#PCDATA)>
+<!ELEMENT numerojournal (#PCDATA)>
+ 

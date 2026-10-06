@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<!DOCTYPE personnes [
+<!ELEMENT personnes (personne+)>
+<!ELEMENT personne ( nom,prenom,datenaissance,sexe)>  
+<!ELEMENT nom (#PCDATA)> 
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT datenaissance (#PCDATA)>
+<!ELEMENT sexe (#PCDATA)>
+]>
+
+
+<personnes>
+<personne>
+<nom> kolani</nom>
+<prenom>didier </prenom>
+<datenaissance> </datenaissance>
+<sexe> Masculin </sexe>
+</personne>
+</personnes>
+
+
+

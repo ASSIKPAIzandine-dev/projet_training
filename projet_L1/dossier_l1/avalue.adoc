@@ -1,0 +1,102 @@
+= ASCIIDOC =
+
+== Qu’est-ce que AsciiDOC?
+
+Asciidoc est un format de fichier texte qui permet d’écrire des documents (livres, articles, pages web, blogs, …​).
+
+Il définit des constructions syntaxiques qui aideront à comprendre la sémentique des différentes parties de votre texte afin de produire une sortie bien formatée. Cette sortie formatée est un document de format publiable (HTML, DocBook, PDF, ePub, …​).
+
+Certains caractères dans votre document textuel ont une signification spéciale qui va changer le rendu du document. C’est exactement le même concept que les balises en HTML. Mais une différence clé avec AsciiDoc est la propriété du document source à rester même lisible par l’homme.
+
+L’utilisation d’un format textuel a plusieurs avantages :
+
+*  Le document est facilement lisible et modifiable, 
+*  la taille des documents est très légère.
+
+
+== Comment écrire dans AsciiDoc? ==
+
+Comme je l’ai dit plus haut, AsciiDoc est un humain lisible -format de fichier texte.- Ainsi, vous pouvez écrire vos documents en utilisant l’éditeur de texte de votre choix.
+
+L’extension des fichiers AsciiDoc est .adoc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

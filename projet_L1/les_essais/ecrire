@@ -1,0 +1,53 @@
+<?php
+$fichier = fopen('salutation.txt', 'w');
+fwrite($fichier, 'Bonjour, monde !');
+e
+fclose($fichier);
+?>
+
+
+
+
+
+
+
+
+
+
+Ici, le mode 'w' ouvre le fichier en écriture seule, place le pointeur au début, et vide le fichier s'il existe déjà.
+ Après avoir écrit, il est essentiel de fermer le fichier avec fclose() pour libérer les ressources.
+
+Pour lire le contenu d'un fichier, on peut utiliser fopen() en mode lecture ('r') et fgets() pour lire ligne par ligne, ou file_get_contents() pour lire tout le fichier en une seule fois. Par exemple, pour lire un fichier donnees.txt entièrement :
+
+<?php
+$contenu = file_get_contents('donnees.txt');
+echo $contenu;
+?>
+
+Cette méthode est simple et efficace pour des fichiers de taille modérée.
+ Pour lire ligne par ligne, on peut utiliser une boucle avec fgets() :
+
+<?php
+$fichier = fopen('donnees.txt', 'r');
+while (!feof($fichier)) {
+    echo fgets($fichier) . "<br>";
+}
+fclose($fichier);
+?>
+
+
+
+Le pointeur de fichier est déplacé à chaque lecture, et feof() permet de détecter la fin du fichier.
+ Pour des fichiers volumineux, il est recommandé d'utiliser fgets() par morceaux pour éviter une surcharge mémoire.
+
+Une autre méthode simple pour écrire dans un fichier est file_put_contents(), qui combine l'ouverture, l'écriture et la fermeture du fichier en une seule fonction. Par exemple :
+
+<?php
+$contenu = 'Ceci est un exemple.';
+file_put_contents('test.txt', $contenu);
+?>
+
+Cette fonction prend le nom du fichier et le contenu à écrire comme arguments.
+ Elle est particulièrement utile pour des opérations simples d'écriture ou de mise à jour de fichiers.
+
+

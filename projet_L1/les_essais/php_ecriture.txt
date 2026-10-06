@@ -1,0 +1,47 @@
+
+// ---- Écriture dans un fichier ----
+
+// Ouvrir le fichier en mode écriture ('w')
+// 'w' : ouvre pour écriture. Le pointeur est au début du fichier. S'il existe, le contenu est effacé. S'il n'existe pas, il est créé.
+$fp_ecriture = fopen('mon_fichier_avance.txt', 'w');
+
+if ($fp_ecriture) {
+    // Écrire des données dans le fichier
+    fwrite($fp_ecriture, "Première ligne écrite.\n");
+    fwrite($fp_ecriture, "Deuxième ligne écrite.\n");
+
+    // Fermer le fichier
+    fclose($fp_ecriture);
+    echo "Données écrites dans mon_fichier_avance.txt<br>";
+} else {
+    echo "Erreur : Impossible d'ouvrir le fichier pour écrire.<br>";
+}
+
+// ---- Lecture d'un fichier ligne par ligne ----
+
+// Ouvrir le fichier en mode lecture ('r')
+$fp_lecture = fopen('mon_fichier_avance.txt', 'r');
+
+if ($fp_lecture) {
+    echo "Lecture du fichier ligne par ligne : <br>";
+    // Lire le fichier ligne par ligne jusqu'à la fin du fichier
+    while (!feof($fp_lecture)) {
+        $ligne = fgets($fp_lecture); // Lit une ligne du fichier
+        echo $ligne . "<br>"; // Affiche la ligne lue
+    }
+    // Fermer le fichier
+    fclose($fp_lecture);
+} else {
+    echo "Erreur : Impossible d'ouvrir le fichier pour lire.<br>";
+}
+
+// ---- Lire l'intégralité du fichier ----
+
+// Ouvrir le fichier en mode lecture ('r')
+$fp_lecture_complete = fopen('mon_fichier_avance.txt', 'r');
+
+if ($fp_lecture_complete) {
+    // Obtenir la taille du fichier
+    $taille_fichier = filesize('mon_fichier_avance.txt');
+    // Lire tout le contenu du fichier
+

@@ -1,0 +1,7 @@
+pour ligne dans squelette.txt
+	si (dernier cara de $ligne) == '/'
+		mkdir 
+	sinon
+	        fichiers
+		
+fin pour

@@ -1,0 +1,13 @@
+#! /user/bin/bash 
+ 
+tant que: 
+
+   date=$(date)  
+   temp=$(cat/sys/class/hwmon/hwmon8/temp2_input)
+         temp=$(($temp/52))
+   mette la date et la temp dans le fichier log
+   attendre une seconde  
+   echo $date $temp
+
+   
+   

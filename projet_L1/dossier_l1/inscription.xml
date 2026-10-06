@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inscriptions> [                                                    
+    <ue code ="124" niveau ="mon niveau de connaissance">
+         <titre> le titre introductif </titre>
+         <resume> un resume du cours de tdss</resume>
+         <inscrit num="77" semestre="le second semestre"> </inscrit>        
+    </ue>
+    <etudiant num="235">
+          <nom>le nom sa proposition est valider </nom>
+          <adresse>son adresse se trouve a komah2 </adresse>    
+    </etudiant>   
+</inscriptions> 
+]>
+       
+    
+    
+    

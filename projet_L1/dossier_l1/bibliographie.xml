@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bibliographie SYSTEM "bibliographie.dtd">
+<bibliographie>
+   <livres>
+     <livre>
+       <titre soustitre="les vases de la membranes"> le titre d'une activite </titre>
+       <auteur> un auteur du temps passe</auteur>
+       <tomes>
+         <tome nbpage="pages 20" soustitre="colonisation"/>
+       </tomes>
+       <infosedition>
+         <editeur>l'editeur peut étre connu</editeur>
+         <lieuedition>lieu d'edition de pilon</lieuedition>
+         <lieuimpression>lieu etait a lome</lieuimpression>
+         <ISBN>numero 2542-784</ISBN>
+       </infosedition> 
+       <avis>mon avis compte sur ce livre</avis>     
+      </livre>
+    </livres>
+    <articles>   
+      <article>
+        <titre soustitre="les  soustitres de decentralistion">introduction a xml</titre>
+        <auteur>l'auteur de eza botto</auteur>
+        <infospublication nomjournal ="sokode infos">
+          <pages>les pages au total 120</pages>
+          <anneepublication>ils ont publié en 1998</anneepublication>
+          <numerojournal>un numero 25-58000</numerojournal>
+        </infospublication> 
+        <avis>mon avis est partagé avec succè</avis>
+      </article>
+    </articles>   
+</bibliographie>
+     
